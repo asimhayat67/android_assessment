@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <LinearLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottomLayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/topLayOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp">
+
+            <ImageView
+                android:id="@+id/ivDrawer"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/drawer_icon" />
+
+
+            <ImageView
+                android:id="@+id/ivHome"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:src="@drawable/home_icon" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="end"
+                android:layout_marginTop="-20dp"
+                android:src="@drawable/dim_connect_icon" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="@string/str_faq_top"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            tools:text="@string/str_faq_top" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/outerRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/bottom_home_img" />
+
+        <ImageView
+            android:id="@+id/ivBulb"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="60dp"
+            android:src="@drawable/bulb_icon" />
+
+        <TextView
+            android:id="@+id/hier_fehlen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="-3dp"
+            android:layout_toStartOf="@+id/ivBulb"
+            android:paddingTop="5dp"
+            android:text="@string/hier_fehlen"
+            android:textAlignment="center"
+            android:textColor="@color/color_text_bottom"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

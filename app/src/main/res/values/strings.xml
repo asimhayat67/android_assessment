@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Android Assessment</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+
+    <string name="favoritesFragment">Favorites</string>
+    <string name="str_faq_top">FAQ: häufige Fragen,\nschlüssig beantwortet.</string>
+    <string name="hier_fehlen">Hier fehlen wichtige Antworten?\nSchreiben Sie uns!
+</string>
+    <string name="str_comming_soon">Comming soon!</string>
+</resources>
